@@ -22,7 +22,8 @@ To maintain a maximum allowed amplitude of ![Th](https://latex.codecogs.com/svg.
 As a result, the sharp cornes are smoothed by windowing technique as in below figure, that leads to the decrease of unwanted out-of-band emission.  
 ![peak_windowing.png](/image/pending.jpeg?raw=true)
 
-## **Peak Cancellation Technique**
+## **Peak Cancellation Technique**  
+Peak cancellation is an algorithm to reduce the PAPR of a signal. Interestingly, it aims to strike a balance between the out-of-band emission and in-band waveform quality when compressing the signal to a target PAPR. Hence, unlike Hard Clipper and Peak Windowing, the quality of out-of-band and in-band of ouput signal with Peak Cancellation technique is so outstanding in comparation with the previous techniques.   
 ## **Refrerence**  
 [1] Hiten N. Mistry, 2006, "Implementation of a Peak Windowing Algorithm for Crest Factor Reduction in WCDMA", Master Thesis of Engineering, SIMON FRASER UNIVERSITY
 [2]  
