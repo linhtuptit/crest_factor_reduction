@@ -23,11 +23,10 @@ As a result, the sharp cornes are smoothed by windowing technique as in below fi
 ![peak_windowing.png](/image/pending.jpeg?raw=true)
 
 ## **Peak Cancellation Technique**  
-Peak cancellation is an algorithm to reduce the PAPR of a signal. Interestingly, it aims to strike a balance between the out-of-band emission and in-band waveform quality when compressing the signal to a target PAPR. Hence, unlike Hard Clipper and Peak Windowing, the quality of out-of-band and in-band of ouput signal with Peak Cancellation technique is so outstanding in comparation with the previous techniques. The block diagram of Peak Cancellation Technique is depicted belows:  
+Peak cancellation is an algorithm to reduce the PAPR of a signal. Interestingly, it aims to strike a balance between the out-of-band emission and in-band waveform quality when compressing the signal to a target PAPR. Hence, unlike Hard Clipper and Peak Windowing, the quality of out-of-band and in-band of ouput signal with Peak Cancellation technique is so outstanding in comparation with the previous techniques. The block diagram of Peak Cancellation Technique is depicted in [2]:  
 ![peak_cancellation_structure.png](/image/pc_cfr_structure.png?raw=true)  
-
 
 
 ## **Refrerence**  
 - [1] Hiten N. Mistry, 2006, "Implementation of a Peak Windowing Algorithm for Crest Factor Reduction in WCDMA", Master Thesis of Engineering, SIMON FRASER UNIVERSITY  
-- [2] Xilinx, Peak Cancellation Crest Factor Reduction IP LogiCore https://www.xilinx.com/products/intellectual-property/ef-di-pc-cfr.html  
+- [2] Xilinx, 2011, "DS846: LogiCORE IP Peak CancellationCrest Factor Reduction v3.0", https://www.xilinx.com/Attachment/PC-CFR%20v3.0.pdf 
