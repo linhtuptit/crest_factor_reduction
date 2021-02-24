@@ -14,16 +14,16 @@ If ![|x\big(n\big)|<Th](https://latex.codecogs.com/svg.latex?&space;|x\big(n\big
 As a result, hard clipper technique can cause sharp corners in a clipped output signal, which leads to an unwanted out-of-band emission.  
 ![hard_clipper.png](/image/pending.jpeg?raw=true) 
 
-## **Peak Windowing Technique [1]**  
-To reduce unwanted out-of-band emission in the previous technique, the peak windowing algorithm will replace the clipping coefficients ![c\big(n\big)](https://latex.codecogs.com/svg.latex?&space;c\big(n\big)) with ![b\big(n\big)](https://latex.codecogs.com/svg.latex?&space;b\big(n\big)), where:  
+## **Peak Windowing Technique**  
+To reduce unwanted out-of-band emission in the previous technique, the peak windowing algorithm [1] will replace the clipping coefficients ![c\big(n\big)](https://latex.codecogs.com/svg.latex?&space;c\big(n\big)) with ![b\big(n\big)](https://latex.codecogs.com/svg.latex?&space;b\big(n\big)), where:  
 ![b\big(n\big)=1-\sum_{k=-\infty}^{\infty}a_{k}w\big(n-k\big)](https://latex.codecogs.com/svg.latex?&space;b\big(n\big)=1-\sum_{k=-\infty}^{\infty}a_{k}w\big(n-k\big))  
 in which, ![w\big(n\big)](https://latex.codecogs.com/svg.latex?&space;w\big(n\big)) is the windowing function (Blackman, Hamming, Hanning, etc) and ![a_{k}](https://latex.codecogs.com/svg.latex?&space;a_{k}) is  weighting coefficient.  
 To maintain a maximum allowed amplitude of ![Th](https://latex.codecogs.com/svg.latex?&space;Th), ![b\big(n\big)](https://latex.codecogs.com/svg.latex?&space;b\big(n\big)) can not greater than ![c\big(n\big)](https://latex.codecogs.com/svg.latex?&space;c\big(n\big)), it means that the inequality ![1-\sum_{k=-\infty}^{\infty}a_{k}w\big(n-k\big)<=c\big(n\big)](https://latex.codecogs.com/svg.latex?&space;1-\sum_{k=-\infty}^{\infty}a_{k}w\big(n-k\big)<=c\big(n\big)) must satisfy for all data samples.  
 As a result, the sharp cornes are smoothed by windowing technique as in below figure, that leads to the decrease of unwanted out-of-band emission.  
 ![peak_windowing.png](/image/pending.jpeg?raw=true)
 
-## **Peak Cancellation Technique [2]**  
-Peak cancellation is an algorithm to reduce the PAPR of a signal. Interestingly, it aims to strike a balance between the out-of-band emission and in-band waveform quality when compressing the signal to a target PAPR. Hence, unlike Hard Clipper and Peak Windowing, the quality of out-of-band and in-band of ouput signal with Peak Cancellation technique is so outstanding in comparation with the previous techniques. The block diagram of Peak Cancellation Technique is depicted in [2]:  
+## **Peak Cancellation Technique**  
+Peak cancellation [2] is an algorithm to reduce the PAPR of a signal. Interestingly, it aims to strike a balance between the out-of-band emission and in-band waveform quality when compressing the signal to a target PAPR. Hence, unlike Hard Clipper and Peak Windowing, the quality of out-of-band and in-band of ouput signal with Peak Cancellation technique is so outstanding in comparation with the previous techniques. The block diagram of Peak Cancellation Technique is depicted in [2]:  
 ![peak_cancellation_structure.png](/image/pc_cfr_structure.png?raw=true) 
 
 The peak detector block works on the signal magnitudes to produce a peak location indicator along with magnitude and phase information for each peak. The peak scaling block is designed to compensate the difference between the peak magnitudes and the clipping threshold. The magnitude difference is combined with the phase information to extract the complex weighting that is used to scale the cancellation pulse coefficients.  
