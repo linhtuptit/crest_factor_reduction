@@ -12,6 +12,7 @@ in which, clipping function ![c\big(n\big)](https://latex.codecogs.com/svg.latex
 If ![|x\big(n\big)|>=Th](https://latex.codecogs.com/svg.latex?&space;|x\big(n\big)|>=Th), then: ![c\big(n\big)=\frac{Th}{|x\big(n\big)|}](https://latex.codecogs.com/svg.latex?&space;c\big(n\big)=\frac{Th}{|x\big(n\big)|})  
 If ![|x\big(n\big)|<Th](https://latex.codecogs.com/svg.latex?&space;|x\big(n\big)|<Th), then: ![c\big(n\big)=1](https://latex.codecogs.com/svg.latex?&space;c\big(n\big)=1)  
 As a result, hard clipper technique can cause sharp corners in a clipped output signal, which leads to an unwanted out-of-band emission.  
+
 ![hard_clipper.jpg](/image/hc_cfr.jpg?raw=true) 
 
 ## **Peak Windowing Technique**  
@@ -20,6 +21,7 @@ To reduce unwanted out-of-band emission in the previous technique, the peak wind
 in which, ![w\big(n\big)](https://latex.codecogs.com/svg.latex?&space;w\big(n\big)) is the windowing function (Blackman, Hamming, Hanning, etc) and ![a_{k}](https://latex.codecogs.com/svg.latex?&space;a_{k}) is  weighting coefficient.  
 To maintain a maximum allowed amplitude of ![Th](https://latex.codecogs.com/svg.latex?&space;Th), ![b\big(n\big)](https://latex.codecogs.com/svg.latex?&space;b\big(n\big)) can not greater than ![c\big(n\big)](https://latex.codecogs.com/svg.latex?&space;c\big(n\big)), it means that the inequality ![1-\sum_{k=-\infty}^{\infty}a_{k}w\big(n-k\big)<=c\big(n\big)](https://latex.codecogs.com/svg.latex?&space;1-\sum_{k=-\infty}^{\infty}a_{k}w\big(n-k\big)<=c\big(n\big)) must satisfy for all data samples.  
 As a result, the sharp cornes are smoothed by windowing technique as in below figure, that leads to the decrease of unwanted out-of-band emission.  
+
 ![peak_windowing.jpg](/image/pw_cfr.jpg?raw=true)
 
 ## **Peak Cancellation Technique**  
