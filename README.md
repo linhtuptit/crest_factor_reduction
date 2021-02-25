@@ -34,5 +34,5 @@ The allocator block assigns CPGs to incoming peaks. When a new peak is detected 
 ![peak_cancellation.jpg](/image/pc_cfr.jpg?raw=true) 
 
 ## **Reference**  
-- [1] Hiten N. Mistry, 2006, "Implementation of a Peak Windowing Algorithm for Crest Factor Reduction in WCDMA", Master Thesis of Engineering, SIMON FRASER UNIVERSITY  
+- [1] Hiten N. Mistry, 2006, "Implementation of a Peak Windowing Algorithm for Crest Factor Reduction in WCDMA", Master Thesis of Engineering, Simon Fraser University  
 - [2] Xilinx, 2011, "DS846: LogiCORE IP Peak CancellationCrest Factor Reduction v3.0", https://www.xilinx.com/Attachment/PC-CFR%20v3.0.pdf 
